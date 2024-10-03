@@ -18,10 +18,7 @@
     self.dataSource = self;
     ViewController *startingViewController = [self viewControllerAtIndex:0];
     NSArray *viewControllers = @[startingViewController];
-    
     [self setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:NO completion:nil];
-
-    // Do any additional setup after loading the view.
 }
 - (ViewController *)viewControllerAtIndex:(NSUInteger)index
 {

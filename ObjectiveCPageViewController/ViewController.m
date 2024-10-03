@@ -12,10 +12,9 @@
 @end
 
 @implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
+-(void) initializeImageArray{
     _imageArray = [NSMutableArray array];
+    [_imageArray addObject:[UIImage imageNamed:@"komotini1"]];
     [_imageArray addObject:[UIImage imageNamed:@"komotini2"]];
     [_imageArray addObject:[UIImage imageNamed:@"komotini3"]];
     [_imageArray addObject:[UIImage imageNamed:@"komotini4"]];
@@ -29,8 +28,11 @@
     [_imageArray addObject:[UIImage imageNamed:@"komotini12"]];
     [_imageArray addObject:[UIImage imageNamed:@"komotini13"]];
     [_imageArray addObject:[UIImage imageNamed:@"komotini14"]];
-    [_imageArray addObject:[UIImage imageNamed:@"komotini15"]];
     [_mainImageView setImage:[_imageArray objectAtIndex:_pageIndex]];
+}
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self initializeImageArray];
 }
 
 
